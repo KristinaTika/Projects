@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Movie Festival</title>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Movie Festival</h1>
+        <form>
+            <fieldset>
+                <legend>Movie</legend>
+                <input type="text" name="title" id="movie-title" placeholder="Movie Title">
+                <input type="number" name="length" id="movie-length" placeholder="Length (min)">
+                <select name="genre" id="movie-genre">
+                    <option value="">Select Genre</option>
+                    <option value="action">Action</option>
+                    <option value="drama">Drama</option>
+                    <option value="horror">Horror</option>
+                    <option value="thriller">Thriller</option>
+                    <option value="comedy">Comedy</option>
+                </select>
+                <div class="validation-movie">
+                    <p class="movie-valid"></p>
+                </div>
+                <input type="button" id="create-movie" value="Create Movie">
+                
+                <ul id="movie-list-of"></ul>
+                <div id="movie-total-length"></div>
+            </fieldset>
+
+            <fieldset>
+                <legend>Program</legend>
+                <label for="date">Date:</label>
+                <input type="date" id="program-date">
+                <div class="validation-progra">
+                    <p class="program-valid"></p>
+                </div>
+                <input type="button" id="create-program" value="Create Program">
+                <ul id="program-info"></ul>
+
+                <hr>
+
+                <label for="choose-movie"> Choose movie</label>
+                <select name="" id="choose-movie">
+                    <option>-</option>
+                </select>
+
+                <label for="choose-program"> Choose program</label>
+                <select id="choose-program">
+                    <option>-</option>
+                </select>
+                <input type="button" id="add-movie-to-program" value="Add Movie To Program">
+            </fieldset>
+        </form>
+    </div>
+
+    <script type="module">
+        import {init} from './js/main.js'
+        init();
+    </script>
+</body>
+
+</html>
