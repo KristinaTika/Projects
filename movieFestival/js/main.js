@@ -42,7 +42,7 @@ const addToProgramHandler = () => {
     const chosenProgramInfo = data.getProgramInfo(chosenProgram);
     ui.displayProgramInfo(chosenProgramInfo);
     ui.clearChosenOptions();
-    
+
 }
 
 export const init = () => {

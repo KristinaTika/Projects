@@ -19,7 +19,6 @@ class Movie {
     }
 }
 
-
 class Program {
     constructor (date) {
         const inputDate = new Date(date);
@@ -33,7 +32,7 @@ class Program {
 
     lengthOfMovies() {
         let moviesLength = 0;
-        this.movieList.forEach((movie) => {
+        this.movieList.forEach(movie => {
             moviesLength += parseInt(movie.length);
         })
 
