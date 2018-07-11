@@ -1,7 +1,7 @@
 import * as data from './data.js';
 import * as ui from './ui.js';
 
-const CreateMovieHandler = () => {
+const createMovieHandler = () => {
 
     const getMovieData = ui.getMovieInputs();
     const isValid = data.isValid(getMovieData.title, getMovieData.length, getMovieData.genre);
@@ -48,7 +48,7 @@ const addToProgramHandler = () => {
 export const init = () => {
 
     const addMovieToProgramButton = document.querySelector("#create-movie");
-    addMovieToProgramButton.addEventListener("click", CreateMovieHandler);
+    addMovieToProgramButton.addEventListener("click", createMovieHandler);
 
     const buttonProgram = document.querySelector("#create-program");
     buttonProgram.addEventListener("click", createProgramHandler);
