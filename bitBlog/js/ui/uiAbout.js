@@ -2,7 +2,7 @@ const container = document.querySelector(".container");
 
 export const renderAboutPage = () => {
 
-    container.textContent = ("");
+    container.innerHTML = "";
 
     const about = document.createElement("div");
     about.innerHTML = `
