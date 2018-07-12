@@ -1,5 +1,5 @@
 import * as data from "./data/data.js";
-import * as ui from "./ui/uiAbout.js";
+import {renderAboutPage} from "./ui/uiAbout.js";
 import * as uiPost from "./ui/uiPost.js";
 import * as uiAuthor from "./ui/uiAuthor.js";
 
@@ -59,7 +59,7 @@ const backToAuthorsHandler = (event) => {
 const aboutHandler = (event) => {
 
     if (event.target.className == "about") {
-        ui.renderAboutPage();
+        renderAboutPage();
     }
 }
 
