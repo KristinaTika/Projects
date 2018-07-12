@@ -27,7 +27,7 @@ export const renderPosts = (posts) => {
 
 export const renderSinglePost = (post, author) => {
 
-    container.textContent = ("");
+    container.innerHTML = "";
     const singlePostDiv = document.createElement("div");
     singlePostDiv.innerHTML = `
     <h1>${post.title}</h1>
@@ -64,7 +64,7 @@ export const renderMorePostsFromASingleAuthor = (posts) => {
 
 export const displayCreateNewPost = () => {
 
-    container.textContent = ("");
+    container.innerHTML = "";
     const newPost = document.createElement("div");
     newPost.innerHTML = `
     <h1>NEW POST</h1>
