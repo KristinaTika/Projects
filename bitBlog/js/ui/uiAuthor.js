@@ -2,7 +2,7 @@ const container = document.querySelector(".container");
 
 export const renderAuthors = (authors) => {
 
-    container.textContent = ("");
+    container.innerHTML= "";
 
     const authorTitle = document.createElement("h1");
     authorTitle.textContent = `Authors (${authors.length})`;
@@ -26,7 +26,7 @@ export const renderAuthors = (authors) => {
 
 export const renderSingleAuthor = (author) => {
 
-    container.textContent = ("");
+    container.innerHTML = "";
 
     const singleAuthor = document.createElement("div");
     singleAuthor.innerHTML = `
