@@ -1,11 +1,9 @@
-
-
 export const get = (url) => {
 
     return fetch(url, {
         headers: {
             "Content-type": "application/json; charset=UTF-8"
-          },
+        },
         method: 'GET'
     })
         .then(response => {
@@ -20,7 +18,10 @@ export const post = (url, newContent) => {
         body: JSON.stringify(newContent),
         headers: {
             "Content-type": "application/json; charset=UTF-8"
-          }
+        }
     }
-    return fetch(url, postData);
+    return fetch(url, postData)
+        .then(response => {
+            return response.json();
+        })
 }

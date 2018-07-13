@@ -67,8 +67,6 @@ export const getProgramInputs = () => {
     return {
         date
     }
-
-
 }
 
 export const clearProgramInput = () => {
@@ -140,7 +138,6 @@ export const clearChosenOptions = () => {
 
     chosenMovieIndex.value = "";
     chosenProgramIndex.value = "";
-
 }
 
 
@@ -154,5 +151,4 @@ export const displayProgramInfo = (programInfo) => {
             program.textContent = programInfo;
         }
     });
-
 }

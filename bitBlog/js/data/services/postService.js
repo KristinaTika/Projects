@@ -1,4 +1,4 @@
-import { postsEndpoint, singlePostEndpoint, postsFromASingleAuthorEndpoint } from '../constants/constants.js';
+import { postsEndpoint, singlePostEndpoint, postsFromASingleAuthorEndpoint } from '../shared/constants.js';
 import { get, post } from './APIService.js';
 
 
@@ -19,7 +19,6 @@ class PostService {
     createNewPost( data) {
         return post(postsEndpoint, data)
     }
-
 }
 
 export const postService = new PostService;

@@ -2,6 +2,7 @@ const container = document.querySelector(".container");
 
 export const renderPosts = (posts) => {
 
+    container.innerHTML="";
     const postTitle = document.createElement("h1");
     postTitle.textContent = "POSTS";
     container.appendChild(postTitle);

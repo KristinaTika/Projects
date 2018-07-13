@@ -24,7 +24,7 @@ const createProgramHandler = () => {
     const isValid = data.isValidDate(getProgramData.date);
     if (!isValid) {
         ui.displayProgramError();
-        return
+        return;
     }
     ui.removeProgramError();
 
@@ -37,12 +37,10 @@ const createProgramHandler = () => {
 const addToProgramHandler = () => {
 
     const { chosenMovieIndex, chosenProgramIndex } = ui.getChosenOptions();
-    const { chosenMovie, chosenProgram } =
-        data.addMovieToProgram(chosenMovieIndex, chosenProgramIndex);
+    const { chosenMovie, chosenProgram } = data.addMovieToProgram(chosenMovieIndex, chosenProgramIndex);
     const chosenProgramInfo = data.getProgramInfo(chosenProgram);
     ui.displayProgramInfo(chosenProgramInfo);
     ui.clearChosenOptions();
-
 }
 
 export const init = () => {

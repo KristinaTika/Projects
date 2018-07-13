@@ -23,14 +23,12 @@ export const getPosts = () => {
 export const getSinglePost = (id) => {
 
     return postService.fetchSinglePost(id);
-
 }
 
 export const postNewPost = (data) => {
 
     postService.createNewPost(data);
 }
-
 
 export const getMorePostsFromAuthor = (authorId) => {
 

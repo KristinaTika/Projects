@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/css/materialize.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt"
+        crossorigin="anonymous">
+    <title>Bit People</title>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="nav-wrapper container">
+                <span class="brand-logo center bit-people">Bit People</span>
+                <ul id="nav-mobile" class="right hide-on-med-and-down row">
+                    <li>
+                        <span class="about">About</span>
+                    </li>
+                    <li>
+                        <i class="material-icons refresh">refresh</i>
+                    </li>
+                    <li class="li-change-view">
+                        <span>
+                            <i class="material-icons set-view">view_module</i>
+                        </span>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <nav class="search-bar">
+            <div class="nav-wrapper search-bar">
+                <form>
+                    <div class="input-field">
+                        <input id="search" type="search" required>
+                        <label class="label-icon" for="search">
+                            <i class="material-icons">search</i>
+                        </label>
+                        <i class="material-icons close">close</i>
+                    </div>
+                </form>
+            </div>
+        </nav>
+
+        <div class="root"></div>
+    </main>
+
+
+    <footer class="page-footer">
+        <div class="container left footer">
+            <span>© 2018 Copyright Kristina Butkovic </span>
+            <span class="last-update right"></span>
+        </div>
+    </footer>
+
+    <script type="module">
+        import { init } from "./js/main.js";
+        init();
+    </script>
+</body>
+
+</html>

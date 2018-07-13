@@ -1,16 +1,13 @@
 import * as data from "./data/data.js";
-import {renderAboutPage} from "./ui/uiAbout.js";
+import { renderAboutPage } from "./ui/uiAbout.js";
 import * as uiPost from "./ui/uiPost.js";
 import * as uiAuthor from "./ui/uiAuthor.js";
-
-const container = document.querySelector(".container");
 
 const loadPosts = () => {
 
     data.getPosts()
         .then((postList) => {
             uiPost.renderPosts(postList)
-         
         });
 }
 
@@ -19,7 +16,6 @@ const handleHome = (event) => {
     event.preventDefault();
 
     if (event.target.className == "home") {
-        container.textContent = "";
         loadPosts();
     }
 }
@@ -66,29 +62,19 @@ const aboutHandler = (event) => {
 const cancelNewPostHandler = (event) => {
 
     event.preventDefault();
-
-    container.textContent = "";
-
     if (event.target.className == "cancel-new-post") {
         loadPosts();
     }
-
 }
 
 const createPostHandler = (event) => {
 
     event.preventDefault();
-    
     const postData = uiPost.collectNewPostData();
-
     if (event.target.className == "create-post") {
-        data.postNewPost(postData)
-        console.log(postData);
-
-        container.textContent = "";
-        loadPosts()
+        data.postNewPost(postData);
+        loadPosts();
     }
-
 }
 
 const createNewPostHandler = (event) => {
@@ -109,7 +95,7 @@ const getMorePostsHandler = (author) => {
             uiPost.renderMorePostsFromASingleAuthor(response);
             const authorName = document.querySelector(".author-name");
             authorName.addEventListener("click", singleAuthorHandler);
-            const morePosts = document.querySelector(".more-posts")
+            const morePosts = document.querySelector(".more-posts");
             morePosts.addEventListener("click", singlePostHandler);
         })
 }
@@ -118,8 +104,8 @@ const getAuthorHandler = (post) => {
 
     data.getSingleAuthor(post.userId)
         .then((author) => {
-            getMorePostsHandler(author)
-            uiPost.renderSinglePost(post, author)
+            getMorePostsHandler(author);
+            uiPost.renderSinglePost(post, author);
         })
 }
 
@@ -128,11 +114,10 @@ const singlePostHandler = (event) => {
     event.preventDefault();
     if (event.target.className == "single-post" || event.target.className == "more-posts") {
         const postId = event.target.getAttribute("data-id");
-
         data.getSinglePost(postId)
             .then((singlePost) => {
-                getAuthorHandler(singlePost)
-            })
+                getAuthorHandler(singlePost);
+            });
     }
 }
 
@@ -150,9 +135,6 @@ const singleAuthorHandler = (event) => {
             })
     }
 }
-
-
-
 
 export const init = () => {
 

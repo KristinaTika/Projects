@@ -1,4 +1,4 @@
-import { authorsEndpoint, singleAuthorEndpoint} from "../constants/constants.js";
+import { authorsEndpoint, singleAuthorEndpoint} from "../shared/constants.js";
 import { get } from "./apiService.js";
 
 class AuthorService {
@@ -10,7 +10,6 @@ class AuthorService {
     fetchSingleAuthor(authorId) {
         return get(`${singleAuthorEndpoint}${authorId}`)
     }
-
 }
 
 export const authorService = new AuthorService;
