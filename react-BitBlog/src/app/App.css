@@ -1,0 +1,59 @@
+.map {
+  margin-top: 10px;
+}
+
+.divider {
+  border-bottom: 1px solid black;
+}
+
+.footer {
+  padding-bottom: 25px;
+}
+
+#title {
+  border: 1px solid black;
+  width: 30%;
+  height: 50px;
+  margin-left: 50px;
+  border-radius: 10px;
+}
+
+#content {
+  border: 1px solid black;
+  width: 50%;
+  height: 150px;
+  margin-left: 50px;
+  border-radius: 10px;
+}
+
+.title, .text-content {
+  margin-left: 50px;
+}
+
+.cancel {
+  margin-bottom: 50px;
+  margin-left: 500px;
+  border-radius: 10px;
+  color: white;
+  background-color: #ee6e73;
+  padding: 10px;
+}
+
+.create-post {
+  margin-bottom: 50px;
+  margin-left: 100px;
+  border-radius: 10px;
+  color: white;
+  background-color: #ee6e73;
+  padding: 10px;
+}
+
+.validation {
+  color: red;
+  margin-left: 50px;
+}
+
+.lorem {
+  margin-bottom: 100px;
+}
+
